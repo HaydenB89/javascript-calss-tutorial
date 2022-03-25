@@ -32,6 +32,7 @@ const loaded = () => {
 
 const display = () => {
     const tbodyCtrl = document.getElementById("custs")
+    tbodyCtrl.innerHTML = "";
     for(let custs of customers) {
         let tr = "<tr>";
         tr += `<td>${custs.id}`;
@@ -40,4 +41,16 @@ const display = () => {
         tr += "<tr>";
         tbodyCtrl.innerHTML += tr;
     }
+}
+
+const add = () => {
+    let inpIdCtrl = document.getElementById("pId");
+    let inpNameCtrl = document.getElementById("pName");
+    let inpSalesCtrl = document.getElementById("pSales");
+    let cust = new Customer();
+    cust.id = +inpIdCtrl.value;
+    cust.name = inpNameCtrl.value;
+    cust.sales = +inpSalesCtrl.value;
+    customers.push(cust);
+    display(customers);
 }

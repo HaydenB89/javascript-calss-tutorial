@@ -8,8 +8,25 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
     crossorigin="anonymous">
 </head>
-<body onload="loaded()">
-    <table class="table table-small">
+<body onload="loaded()" class="bg-dark text-light">
+    <table class="table table-small text-light">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Sales</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input id="pId" type="number"></td>
+                <td><input id="pName" type="text"></td>
+                <td><input id="pSales" type="number"></td>
+            </tr>    
+        </tbody>
+    </table>
+    <button onclick="add()">Add</button>
+    <table class="table table-small text-light">
         <thead>
             <tr>
                 <th>Id</th>
